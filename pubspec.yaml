@@ -22,6 +22,18 @@ dependencies:
   # double精度
   decimal: ^3.2.4
 
+  # 网络请求
+  dio: ^5.9.0
+
+  # 权限
+  permission_handler: ^12.0.1
+
+  # 图片保存
+  image_gallery_saver_plus: ^4.0.1
+
+  # 吐司
+  oktoast: ^3.4.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
