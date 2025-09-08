@@ -1,5 +1,5 @@
 import 'package:intl/intl.dart';
-import 'date_time_extension.dart';
+import 'package:shengyu_flutter_plugins/enum/date_time_type.dart';
 
 extension StringExtension on String? {
   /// 空安全
@@ -19,8 +19,7 @@ extension StringExtension on String? {
     if (isEmptyOrNull) return null;
     try {
       final timestamp = int.parse(this!);
-      return DateFormat(format.format)
-          .format(DateTime.fromMillisecondsSinceEpoch(timestamp));
+      return DateFormat(format.format).format(DateTime.fromMillisecondsSinceEpoch(timestamp));
     } catch (e) {
       return null;
     }
@@ -63,7 +62,7 @@ extension StringExtension on String? {
       return null;
     }
   }
-  
+
   DateTime? get toDateTime {
     if (isEmptyOrNull) return null;
     try {

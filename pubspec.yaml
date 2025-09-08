@@ -34,6 +34,18 @@ dependencies:
   # 吐司
   oktoast: ^3.4.0
 
+  # 路径
+  path: ^1.9.1
+
+  # 路径提供
+  path_provider: ^2.1.5
+
+  # 图片选择
+  image_picker: ^1.2.0
+
+  # 日志
+  logger: ^2.6.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

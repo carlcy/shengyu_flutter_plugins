@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shengyu_flutter_plugins/enum/image_type.dart';
 import 'package:shengyu_flutter_plugins/init.dart';
 
 import 'image_utils.dart';
