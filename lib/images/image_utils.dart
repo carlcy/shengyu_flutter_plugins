@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shengyu_flutter_plugins/enum/image_type.dart';
-import 'package:shengyu_flutter_plugins/util/extension/string_extension.dart';
+import 'package:shengyu_flutter_plugins/extension/string_extension.dart';
 
 class ImageUtils {
   static ImageProvider getAssetImage(String name, {ImageFormat format = ImageFormat.png, String? packageName}) {
