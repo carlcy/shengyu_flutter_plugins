@@ -46,6 +46,24 @@ dependencies:
   # 日志
   logger: ^2.6.1
 
+  # 监听、广播
+  event_bus_plus: ^0.7.0
+
+  # 音频播放器
+  audioplayers: ^6.5.1
+
+  # 微信
+  fluwx: ^5.7.2
+
+  # qq
+  tencent_kit: ^6.2.0
+
+  # 微博
+  weibo_kit: ^4.0.0
+
+  # 钉钉
+  flu_dingtalk: ^1.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

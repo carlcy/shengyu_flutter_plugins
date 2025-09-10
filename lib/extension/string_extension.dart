@@ -1,5 +1,6 @@
 import 'package:intl/intl.dart';
 import 'package:shengyu_flutter_plugins/enum/date_time_type.dart';
+import 'package:shengyu_flutter_plugins/extension/date_time_extension.dart';
 
 extension StringExtension on String? {
   /// 空安全
@@ -71,5 +72,45 @@ extension StringExtension on String? {
     } catch (e) {
       return null;
     }
+  }
+
+  /// 从时间戳字符串转换为DateTime
+  DateTime? get fromTimestamp {
+    try {
+      return DateTime.fromMillisecondsSinceEpoch(int.parse(this!));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// 根据指定格式解析日期时间字符串
+  DateTime? parse(String format) {
+    try {
+      return DateFormat(format).parse(this!);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// 根据枚举格式解析日期时间字符串
+  DateTime? parseWithEnum(DateTimeFormats format) {
+    try {
+      return DateFormat(format.format).parse(this!);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /// 转换为时间戳字符串
+  String? get toTimestampString {
+    final dateTime =
+        parseWithEnum(DateTimeFormats.standard) ??
+            parseWithEnum(DateTimeFormats.date) ??
+            parseWithEnum(DateTimeFormats.time) ??
+            parseWithEnum(DateTimeFormats.yearMonth) ??
+            parseWithEnum(DateTimeFormats.monthDay) ??
+            parseWithEnum(DateTimeFormats.chineseDate) ??
+            parseWithEnum(DateTimeFormats.chineseDateTime);
+    return dateTime?.timestampString;
   }
 }
